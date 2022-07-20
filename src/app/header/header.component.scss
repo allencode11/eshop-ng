@@ -1,0 +1,19 @@
+@import '../../styles.scss';
+
+#header {
+  height: 50px;
+  background-color: $green-primary;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  padding: 10px;
+}
+
+.btn {
+  border-radius: 10px;
+  border: 1px solid $brown-primary;
+  padding: 10px;
+  color: $brown-primary;
+  cursor: pointer;
+  margin-right: 10px;
+}

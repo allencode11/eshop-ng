@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: fantasy;
+}
+
+body {
+  background-color: #ebeded;
+}
+
+#header {
+  height: 50px;
+  background-color: #2dba9a;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  padding: 10px;
+}
+
+.btn {
+  border-radius: 10px;
+  border: 1px solid #4b4b4c;
+  padding: 10px;
+  color: #4b4b4c;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+/*# sourceMappingURL=header.component.css.map */

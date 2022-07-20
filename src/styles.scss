@@ -1,1 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+$green-primary: #2dba9a;
+$brown-primary: #4b4b4c;
+$white-primary: #ebeded;
+$light-green: #85d0bf;
+$light-brown: #a9a8ab;
+
+$font-stack: "Apple Chancery", sans-serif;
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: fantasy;
+}
+
+body {
+  background-color: $white-primary;
+}

@@ -1,0 +1,8 @@
+#content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: center;
+}
+
+/*# sourceMappingURL=app.component.css.map */

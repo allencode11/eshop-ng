@@ -1,0 +1,24 @@
+
+<div *ngIf="!index; else elseBlock">
+  <div class="list">
+    <img src="{{elem.image}}"/>
+    <div>
+      <span id="title">{{elem.name}}</span>
+      <span id="price">{{elem.price | currency: 'EUR'}}</span>
+      <div id="content">{{elem.description}}</div>
+    </div>
+  </div>
+</div>
+<ng-template #elseBlock>
+  <div class="grid">
+    <img src="{{elem.image}}"/>
+    <div id="ct-l">
+      <span id="title">{{elem.name}}</span>
+      <span id="price">{{elem.price | currency: 'EUR'}}</span>
+      <div id="content">{{elem.description}}</div>
+    </div>
+  </div>
+  </ng-template>
+
+
+

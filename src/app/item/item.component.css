@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: fantasy;
+}
+
+body {
+  background-color: #ebeded;
+}
+
+.grid {
+  color: #4b4b4c;
+  border: 2px solid #2dba9a;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+}
+.grid img {
+  width: 150px;
+  height: auto;
+}
+.grid span {
+  color: #2dba9a;
+  margin-right: 10px;
+}
+.grid #content {
+  max-width: 200px;
+  justify-self: center;
+}
+
+.list {
+  color: #4b4b4c;
+  border: 2px solid #2dba9a;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  direction: rtl;
+  justify-content: center;
+}
+.list img {
+  width: 50px;
+  height: auto;
+  margin-left: 25px;
+}
+.list span {
+  color: #2dba9a;
+  margin-right: 20px;
+}
+.list #content {
+  display: inline-block;
+  margin-right: 20px;
+}
+.list #ct-l {
+  direction: ltr;
+}
+
+/*# sourceMappingURL=item.component.css.map */

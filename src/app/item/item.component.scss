@@ -1,0 +1,63 @@
+@import "../../styles.scss";
+
+.grid {
+  color: $brown-primary;
+  border: 2px solid $green-primary;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+
+  img {
+    width: 150px;
+    height: auto;
+  }
+
+  span {
+    color: $green-primary;
+    margin-right: 10px;
+  }
+
+  #content {
+    max-width: 200px;
+    justify-self: center;
+  }
+}
+
+.list {
+  color: $brown-primary;
+  border: 2px solid $green-primary;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  direction: rtl;
+  justify-content: center;
+
+  img {
+    width: 50px;
+    height: auto;
+    margin-left: 25px;
+  }
+
+  span {
+    color: $green-primary;
+    margin-right: 20px;
+  }
+
+  #content {
+    display: inline-block;
+    margin-right: 20px;
+  }
+
+  #ct-l {
+    direction: ltr;
+  }
+}
