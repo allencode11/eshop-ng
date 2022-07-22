@@ -34,7 +34,7 @@ export class ItemsService {
     }
   }
 
-  sortItems(str: 'dsc' | 'asc'): Item[] {
+  sortItems(str: string): Item[] {
     if (str === 'asc') {
       console.log(this.Items.sort((a, b) => { return a.price - b.price }), ' sort ', 'asc')
       return this.Items.sort((a, b) => { return a.price - b.price })
@@ -46,7 +46,6 @@ export class ItemsService {
   }
 
   searchItems(str: string): Item[] {
-    console.log(this.Items.filter(el => el.name.includes(str)), ' search ', str)
-    return this.Items.filter(el => el.name.includes(str))
+    return this.Items.filter(el => el.name.toLowerCase().includes(str.toLowerCase()))
   }
 }
