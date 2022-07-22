@@ -9,7 +9,6 @@ import { ItemsService } from '../services/items.service';
 })
 export class CartComponent implements OnInit {
   cart: Item[] = [];
-  @Output() itemsCartEvent = new EventEmitter<Item>();
 
   constructor(private itemsService: ItemsService) {
     this.cart = this.itemsService.getCart();
@@ -18,5 +17,7 @@ export class CartComponent implements OnInit {
   ngOnInit(): void {
   }
 
-
+  deleteItem(item: Item) {
+    this.cart = this.itemsService.changeItems(item, this.cart);
+  }
 }
