@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { Items } from './data';
 import { Item } from './types';
+import { ItemsService } from './services/items.service';
 
 @Component({
   selector: 'app-root',
@@ -9,8 +9,8 @@ import { Item } from './types';
 })
 export class AppComponent {
   title: string = 'shopList';
-  Items: Item[] = Items;
-  cart: Item[] = [this.Items[0]];
+  Items: Item[] = [];
+  cart: Item[] = [];
   position: number = 0;
   openCart: boolean = false;
 
@@ -18,18 +18,18 @@ export class AppComponent {
     this.position = vl;
   }
 
+  constructor(private itemsService: ItemsService) {
+    this.Items = this.itemsService.getItems();
+    this.cart = this.itemsService.getCart();
+  }
+
   switchOpenCart(): void {
     this.openCart = !this.openCart;
   }
 
   addToCart(item: Item): void {
-    const index = this.cart.findIndex(el => el.description === item.description && el.name === item.name);
-    if(index === -1) {
-      this.cart.push(item);
-      console.log(this.cart, true)
-    } else {
-      this.cart = this.cart.filter((el, ind) => ind !== index)
-      console.log(this.cart, false)
-    }
+    this.cart = this.itemsService.changeItems(item, this.cart);
+    console.log(this.cart, 'cart from app component')
+    // console.log(this.cart(item, this.cart), 'response in app component')
   }
 }

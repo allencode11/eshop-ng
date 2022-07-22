@@ -1,4 +1,4 @@
-<app-header (positionEvent)="changePosition($event)" [cartItems]="cart" (openCartEvent)="switchOpenCart()">
+<app-header (positionEvent)="changePosition($event)" (openCartEvent)="switchOpenCart()">
 
 </app-header>
 
@@ -9,5 +9,5 @@
 </div>
 
 <div *ngIf="openCart">
-  <app-cart [items]="cart" ></app-cart>
+  <app-cart></app-cart>
 </div>

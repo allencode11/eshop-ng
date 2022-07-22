@@ -1,5 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Item } from '../types';
+import { ItemsService } from '../services/items.service';
 
 @Component({
   selector: 'app-cart',
@@ -7,11 +8,15 @@ import { Item } from '../types';
   styleUrls: ['./cart.component.scss']
 })
 export class CartComponent implements OnInit {
-  @Input() items: Item[] = [];
+  cart: Item[] = [];
+  @Output() itemsCartEvent = new EventEmitter<Item>();
 
-  constructor() { }
+  constructor(private itemsService: ItemsService) {
+    this.cart = this.itemsService.getCart();
+  }
 
   ngOnInit(): void {
   }
+
 
 }

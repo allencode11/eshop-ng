@@ -1,5 +1,6 @@
 import { Component, EventEmitter, OnInit, Output, Input } from '@angular/core';
 import { Item } from '../types';
+import { ItemsService } from '../services/items.service';
 
 @Component({
   selector: 'app-header',
@@ -10,11 +11,11 @@ export class HeaderComponent implements OnInit {
   private options: string[] = ['list', 'grid'];
   private position: number = 0;
 
-  @Input() cartItems: Item[] = [];
   @Output() positionEvent = new EventEmitter<number>();
   @Output() openCartEvent = new EventEmitter<boolean>();
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
