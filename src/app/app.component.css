@@ -1,8 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: fantasy;
+}
+
+body {
+  background-color: #ebeded;
+}
+
 #content {
   display: flex;
   flex-wrap: wrap;
   align-items: stretch;
   justify-content: center;
+}
+
+#search {
+  border: 2px solid #2dba9a;
+  border-radius: 5px;
+  padding-left: 5px;
+  padding-top: 3px;
+  color: #4b4b4c;
+  margin: 10px;
+  background-color: #ebeded;
+}
+
+label {
+  color: #2dba9a;
+}
+
+#items-sort {
+  border: 2px solid #2dba9a;
+  border-radius: 5px;
+  padding: 3px;
 }
 
 /*# sourceMappingURL=app.component.css.map */

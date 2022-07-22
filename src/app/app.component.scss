@@ -1,6 +1,27 @@
+@import '../styles';
+
 #content {
     display: flex;
     flex-wrap: wrap;
     align-items: stretch;
     justify-content: center;
+}
+
+#search {
+  border: 2px solid $green-primary;
+  border-radius: 5px;
+  padding-left: 5px;
+  padding-top: 3px;
+  color: $brown-primary;
+  margin: 10px;
+  background-color: $white-primary;
+}
+
+label {
+  color: $green-primary
+}
+#items-sort {
+  border: 2px solid $green-primary;
+  border-radius: 5px;
+  padding: 3px;
 }

@@ -2,22 +2,19 @@
 
 </app-header>
 
-<label for="items">Order by:</label>
+<label for="items-sort">Order by:</label>
 
-<select #items id="items" (change)="sortItems(items.value)">
-  <option value="asc">from the smallest small to the largest</option>
-  <option value="dsc">from the largest small to the smallest</option>
+<select #itemsSort id="items-sort" (change)="sortItems(itemsSort.value)">
+  <option value="0" selected disabled>none</option>
+  <option value="dsc">from the largest to the smallest</option>
+  <option value="asc">from the smallest to the largest</option>
 </select>
 
 
-<input type="text" #search placeholder="Search by name" maxlength="25" (change)="searchItems(search.value)">
-
-<div style="background-color: black; color: white" (click)="searchItems('Lime')">
-  search for Lime
-</div>
+<input id="search" type="text" #search placeholder="Search by name" maxlength="25" (change)="searchItems(search.value)">
 
 <div id="content">
-  <div *ngFor="let item of Items">
+  <div *ngFor="let item of items">
     <app-item [elem]="item" [index]="position" (click)="addToCart(item)"></app-item>
   </div>
 </div>

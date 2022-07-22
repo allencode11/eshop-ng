@@ -9,7 +9,7 @@ import { ItemsService } from './services/items.service';
 })
 export class AppComponent {
   title: string = 'shopList';
-  Items: Item[] = [];
+  items: Item[] = [];
   cart: Item[] = [];
   position: number = 0;
   openCart: boolean = false;
@@ -19,7 +19,7 @@ export class AppComponent {
   }
 
   constructor(private itemsService: ItemsService) {
-    this.Items = this.itemsService.getItems();
+    this.items = this.itemsService.getItems();
     this.cart = this.itemsService.getCart();
   }
 
@@ -34,12 +34,12 @@ export class AppComponent {
   }
 
   sortItems(str: string) {
-    this.Items = this.itemsService.sortItems(str);
-    console.log(this.Items);
+    this.items = this.itemsService.sortItems(str);
+    console.log(this.items);
   }
 
   searchItems(str: string) {
-    this.Items = this.itemsService.searchItems(str);
-    console.log(this.Items)
+    this.items = this.itemsService.searchItems(str);
+    console.log(this.items)
   }
 }
