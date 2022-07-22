@@ -34,14 +34,14 @@ export class ItemsService {
     }
   }
 
-  sortItems(str: 'dsc' | 'asc'): void {
+  sortItems(str: 'dsc' | 'asc'): Item[] {
     if (str === 'asc') {
-      this.Items.sort((a, b) => { return a.price - b.price })
       console.log(this.Items.sort((a, b) => { return a.price - b.price }), ' sort ', 'asc')
+      return this.Items.sort((a, b) => { return a.price - b.price })
     }
     else {
-      this.Items.sort((a, b) => { return a.price - b.price })
       console.log(this.Items.sort((a, b) => { return b.price - a.price }), ' sort ', 'dsc')
+      return this.Items.sort((a, b) => { return b.price - a.price })
     }
   }
 

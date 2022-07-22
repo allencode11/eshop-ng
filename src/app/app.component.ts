@@ -32,4 +32,14 @@ export class AppComponent {
     console.log(this.cart, 'cart from app component')
     // console.log(this.cart(item, this.cart), 'response in app component')
   }
+
+  sortItems(str: 'asc' | 'dsc') {
+    this.Items = this.itemsService.sortItems(str);
+    console.log(this.Items);
+  }
+
+  searchItems(str: string) {
+    this.Items = this.itemsService.searchItems(str);
+    console.log(this.Items)
+  }
 }

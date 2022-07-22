@@ -1,6 +1,17 @@
 <app-header (positionEvent)="changePosition($event)" (openCartEvent)="switchOpenCart()">
 
 </app-header>
+<div style="background-color: black; color: white" (click)="sortItems('dsc')">
+  sort dsc
+</div>
+
+<div style="background-color: black; color: white" (click)="sortItems('asc')">
+  sort asc
+</div>
+
+<div style="background-color: black; color: white" (click)="searchItems('Lime')">
+  search for Lime
+</div>
 
 <div id="content">
   <div *ngFor="let item of Items">
@@ -11,3 +22,4 @@
 <div *ngIf="openCart">
   <app-cart></app-cart>
 </div>
+
